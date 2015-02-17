@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/select"
+        android:id="@+id/tvPopis"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="0dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_typ"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:spinnerMode="dialog"
+        android:layout_toStartOf="@+id/btn_swap"
+        android:layout_below="@+id/tvPopis"
+        android:minHeight="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swap"
+        android:id="@+id/btn_swap"
+        android:onClick="swap"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvPopis"
+        android:layout_above="@+id/btnClear" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        android:id="@+id/tvPopisValue"
+        android:layout_above="@+id/btn_convert"
+        android:layout_below="@+id/spinner_typ"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:layout_marginStart="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etValue"
+        android:hint="@string/hint1"
+        android:editable="false"
+        android:layout_below="@+id/spinner_typ"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:id="@+id/btnClear"
+        android:layout_alignBottom="@+id/etValue"
+        android:layout_alignParentEnd="true"
+        android:onClick="clear_value" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        android:id="@+id/btn_convert"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etValue"
+        android:onClick="conversion"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/res"
+        android:id="@+id/tvPopisResult"
+        android:layout_below="@+id/btn_convert"
+        android:maxLines="1"
+        android:layout_alignBottom="@+id/etResult"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etResult"
+        android:layout_below="@+id/btn_convert"
+        android:layout_alignStart="@+id/etValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/last_conv"
+        android:id="@+id/tvPopisHistory"
+        android:layout_below="@+id/etResult"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvHistory"
+        android:layout_below="@+id/tvPopisHistory"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unit Converter</string>
+    <string name="select">Select unit you want to convert:</string>
+    <string name="swap">Swap units</string>
+    <string name="value">Value</string>
+    <string name="hint1">e.g. 15.2</string>
+    <string name="clear">Clear</string>
+    <string name="convert">Convert</string>
+    <string name="res">Result</string>
+    <string name="result">Result will be here</string>
+    <string name="last_conv">Last conversions:</string>
+
+    <string-array name="typy_prevodu">
+        <item><b>km/h</b> to <b>m/s</b></item>
+        <item><b>m/s</b> to <b>km/h</b></item>
+        <item><b>mile</b> to <b>km</b></item>
+        <item><b>km</b> to <b>mile</b></item>
+        <item><b>cm</b> to <b>inch</b></item>
+        <item><b>inch</b> to <b>cm</b></item>
+        <item><b>hp</b> to <b>kW</b></item>
+        <item><b>kW</b> to <b>hp</b></item>
+        <item><b>°C</b> to <b>°F</b></item>
+        <item><b>°F</b> to <b>°C</b></item>
+        <item><b>kg</b> to <b>pound</b></item>
+        <item><b>pound</b> to <b>kg</b></item>
+        <item><b>liter</b> to <b>gallon (US)</b></item>
+        <item><b>gallon (US)</b> to <b>liter</b></item>
+    </string-array>
+
+</resources>
